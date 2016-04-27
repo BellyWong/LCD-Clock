@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10116"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Number">
+            <connections>
+                <outlet property="background" destination="jFJ-pK-IUR" id="NrM-sz-qCy"/>
+                <outlet property="bottom" destination="DMi-K9-by2" id="kas-ZN-1g2"/>
+                <outlet property="bottomLeft" destination="62F-UY-UGj" id="w9k-js-Siy"/>
+                <outlet property="bottomRight" destination="FFp-fe-CtE" id="HpL-jI-2SE"/>
+                <outlet property="middle" destination="XLQ-Jy-hrp" id="tzn-03-Xgu"/>
+                <outlet property="top" destination="3TP-PC-4Zf" id="zxV-S4-WYl"/>
+                <outlet property="topLeft" destination="ZK1-mR-nNy" id="tlg-Rq-aNY"/>
+                <outlet property="topRight" destination="cNw-iO-LAu" id="Nzf-30-lOq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="number">
+            <rect key="frame" x="0.0" y="0.0" width="264" height="374"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFJ-pK-IUR" userLabel="background">
+                    <rect key="frame" x="0.0" y="0.0" width="264" height="374"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLQ-Jy-hrp" userLabel="middle">
+                            <rect key="frame" x="57" y="178" width="150" height="19"/>
+                            <color key="backgroundColor" red="1" green="0.36222932223577731" blue="0.35286690859963732" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="XLQ-Jy-hrp" secondAttribute="height" multiplier="8:1" id="eQr-Hh-vIR"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62F-UY-UGj" userLabel="bottomLeft">
+                            <rect key="frame" x="38" y="197" width="19" height="150"/>
+                            <color key="backgroundColor" red="1" green="0.36932596340000001" blue="0.3523307188" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFp-fe-CtE" userLabel="bottomRight">
+                            <rect key="frame" x="207" y="197" width="19" height="150"/>
+                            <color key="backgroundColor" red="1" green="0.36932596340000001" blue="0.3523307188" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNw-iO-LAu" userLabel="topRight">
+                            <rect key="frame" x="207" y="28" width="19" height="150"/>
+                            <color key="backgroundColor" red="1" green="0.36932596340000001" blue="0.3523307188" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TP-PC-4Zf" userLabel="top">
+                            <rect key="frame" x="57" y="9" width="150" height="19"/>
+                            <color key="backgroundColor" red="1" green="0.36932596340000001" blue="0.3523307188" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZK1-mR-nNy" userLabel="topLeft">
+                            <rect key="frame" x="38" y="28" width="19" height="150"/>
+                            <color key="backgroundColor" red="1" green="0.36932596340000001" blue="0.3523307188" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMi-K9-by2" userLabel="bottom">
+                            <rect key="frame" x="57" y="347" width="150" height="19"/>
+                            <color key="backgroundColor" red="1" green="0.36932596340000001" blue="0.3523307188" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="FFp-fe-CtE" firstAttribute="height" secondItem="XLQ-Jy-hrp" secondAttribute="width" id="26L-Oh-1PF" userLabel="bottomRight.height = middle.width"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="centerY" secondItem="jFJ-pK-IUR" secondAttribute="centerY" id="2pN-o0-X3f"/>
+                        <constraint firstItem="3TP-PC-4Zf" firstAttribute="centerX" secondItem="jFJ-pK-IUR" secondAttribute="centerX" id="6nu-aR-Ae8"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="top" secondItem="cNw-iO-LAu" secondAttribute="bottom" id="8dm-v7-EWH"/>
+                        <constraint firstItem="62F-UY-UGj" firstAttribute="width" secondItem="ZK1-mR-nNy" secondAttribute="width" id="9Fb-Tz-IgD"/>
+                        <constraint firstItem="FFp-fe-CtE" firstAttribute="leading" secondItem="XLQ-Jy-hrp" secondAttribute="trailing" id="AYh-mQ-FDm"/>
+                        <constraint firstItem="DMi-K9-by2" firstAttribute="width" secondItem="XLQ-Jy-hrp" secondAttribute="width" id="CsX-be-eZD"/>
+                        <constraint firstItem="ZK1-mR-nNy" firstAttribute="width" secondItem="XLQ-Jy-hrp" secondAttribute="height" id="GWQ-46-de6"/>
+                        <constraint firstItem="DMi-K9-by2" firstAttribute="centerX" secondItem="jFJ-pK-IUR" secondAttribute="centerX" id="JoE-dG-j2I"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="width" secondItem="jFJ-pK-IUR" secondAttribute="height" multiplier="1:2.5" id="Nax-UL-K5b"/>
+                        <constraint firstItem="DMi-K9-by2" firstAttribute="height" secondItem="XLQ-Jy-hrp" secondAttribute="height" id="ORp-JY-Ie0"/>
+                        <constraint firstItem="cNw-iO-LAu" firstAttribute="height" secondItem="XLQ-Jy-hrp" secondAttribute="width" id="U2C-zf-dhg" userLabel="topRight.height = middle.width"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="top" secondItem="ZK1-mR-nNy" secondAttribute="bottom" id="Wwg-O9-B3f"/>
+                        <constraint firstItem="ZK1-mR-nNy" firstAttribute="top" secondItem="3TP-PC-4Zf" secondAttribute="bottom" id="Xje-FE-tfE"/>
+                        <constraint firstItem="3TP-PC-4Zf" firstAttribute="width" secondItem="XLQ-Jy-hrp" secondAttribute="width" id="YYa-NQ-qHJ"/>
+                        <constraint firstItem="62F-UY-UGj" firstAttribute="top" secondItem="XLQ-Jy-hrp" secondAttribute="bottom" id="a21-Rw-qlT"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="centerX" secondItem="jFJ-pK-IUR" secondAttribute="centerX" id="aLx-W1-dAC"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="leading" secondItem="ZK1-mR-nNy" secondAttribute="trailing" id="bBH-aF-iTV"/>
+                        <constraint firstItem="cNw-iO-LAu" firstAttribute="leading" secondItem="XLQ-Jy-hrp" secondAttribute="trailing" id="bok-CV-paR"/>
+                        <constraint firstItem="FFp-fe-CtE" firstAttribute="top" secondItem="XLQ-Jy-hrp" secondAttribute="bottom" id="gv4-kw-8EP"/>
+                        <constraint firstItem="XLQ-Jy-hrp" firstAttribute="leading" secondItem="62F-UY-UGj" secondAttribute="trailing" id="hN9-u5-aGB"/>
+                        <constraint firstItem="DMi-K9-by2" firstAttribute="top" secondItem="62F-UY-UGj" secondAttribute="bottom" id="qp0-Zj-EDq"/>
+                        <constraint firstItem="cNw-iO-LAu" firstAttribute="width" secondItem="XLQ-Jy-hrp" secondAttribute="height" id="vFU-py-eXJ"/>
+                        <constraint firstItem="62F-UY-UGj" firstAttribute="height" secondItem="ZK1-mR-nNy" secondAttribute="height" id="wUF-dh-df1"/>
+                        <constraint firstItem="FFp-fe-CtE" firstAttribute="width" secondItem="XLQ-Jy-hrp" secondAttribute="height" id="xdc-S0-lEK"/>
+                        <constraint firstItem="3TP-PC-4Zf" firstAttribute="height" secondItem="XLQ-Jy-hrp" secondAttribute="height" id="yNT-Qc-SQJ"/>
+                        <constraint firstItem="ZK1-mR-nNy" firstAttribute="height" secondItem="XLQ-Jy-hrp" secondAttribute="width" id="yua-Hx-ygK" userLabel="topLeft.height = middle.width"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98754190279999998" green="1" blue="0.74569382699999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jFJ-pK-IUR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KIs-cl-sTp"/>
+                <constraint firstAttribute="bottom" secondItem="jFJ-pK-IUR" secondAttribute="bottom" id="PvG-51-k3z"/>
+                <constraint firstAttribute="trailing" secondItem="jFJ-pK-IUR" secondAttribute="trailing" id="esC-pc-w1h"/>
+                <constraint firstItem="jFJ-pK-IUR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xcX-nt-LcU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24" y="43"/>
+        </view>
+    </objects>
+</document>

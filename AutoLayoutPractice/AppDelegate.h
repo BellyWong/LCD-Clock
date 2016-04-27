@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  AutoLayoutPractice
 //
-//  Created by Julianne on 2/27/16.
-//  Copyright (c) 2016 Julianne. All rights reserved.
+//  Created by iOess on 2/27/16.
+//  Copyright (c) 2016 iOess. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

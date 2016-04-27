@@ -14,6 +14,13 @@
 		DA79BC351C822D92005428EF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA79BC341C822D92005428EF /* Images.xcassets */; };
 		DA79BC381C822D92005428EF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA79BC361C822D92005428EF /* LaunchScreen.xib */; };
 		DA79BC441C822D92005428EF /* AutoLayoutPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79BC431C822D92005428EF /* AutoLayoutPracticeTests.m */; };
+		DA79BC4F1C823D68005428EF /* Number.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79BC4E1C823D68005428EF /* Number.m */; };
+		DA79BC511C823D7F005428EF /* Number.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA79BC501C823D7F005428EF /* Number.xib */; };
+		DAACC1D41C875CD000E52146 /* AMPM.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACC1D31C875CD000E52146 /* AMPM.m */; };
+		DAACC1D61C875CE500E52146 /* AMPM.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAACC1D51C875CE500E52146 /* AMPM.xib */; };
+		DAACC1D91C876F5100E52146 /* Colon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAACC1D81C876F5100E52146 /* Colon.m */; };
+		DAACC1DB1C876F6200E52146 /* Colon.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAACC1DA1C876F6200E52146 /* Colon.xib */; };
+		DAED1B631CC0624D00AD64E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA79BC341C822D92005428EF /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +42,20 @@
 		DA79BC2E1C822D92005428EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DA79BC2F1C822D92005428EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DA79BC321C822D92005428EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DA79BC341C822D92005428EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DA79BC341C822D92005428EF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AutoLayoutPractice/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		DA79BC371C822D92005428EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DA79BC3D1C822D92005428EF /* AutoLayoutPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79BC421C822D92005428EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA79BC431C822D92005428EF /* AutoLayoutPracticeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutPracticeTests.m; sourceTree = "<group>"; };
+		DA79BC4D1C823D68005428EF /* Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Number.h; sourceTree = "<group>"; };
+		DA79BC4E1C823D68005428EF /* Number.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Number.m; sourceTree = "<group>"; };
+		DA79BC501C823D7F005428EF /* Number.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Number.xib; sourceTree = "<group>"; };
+		DAACC1D21C875CD000E52146 /* AMPM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPM.h; sourceTree = "<group>"; };
+		DAACC1D31C875CD000E52146 /* AMPM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPM.m; sourceTree = "<group>"; };
+		DAACC1D51C875CE500E52146 /* AMPM.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMPM.xib; sourceTree = "<group>"; };
+		DAACC1D71C876F5100E52146 /* Colon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colon.h; sourceTree = "<group>"; };
+		DAACC1D81C876F5100E52146 /* Colon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colon.m; sourceTree = "<group>"; };
+		DAACC1DA1C876F6200E52146 /* Colon.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Colon.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +79,8 @@
 		DA79BC1B1C822D91005428EF = {
 			isa = PBXGroup;
 			children = (
-				DA79BC261C822D92005428EF /* AutoLayoutPractice */,
-				DA79BC401C822D92005428EF /* AutoLayoutPracticeTests */,
+				DA79BC261C822D92005428EF /* LCDClock */,
+				DA79BC401C822D92005428EF /* LCDClockPracticeTests */,
 				DA79BC251C822D92005428EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,7 +94,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DA79BC261C822D92005428EF /* AutoLayoutPractice */ = {
+		DA79BC261C822D92005428EF /* LCDClock */ = {
 			isa = PBXGroup;
 			children = (
 				DA79BC2B1C822D92005428EF /* AppDelegate.h */,
@@ -86,10 +102,20 @@
 				DA79BC2E1C822D92005428EF /* ViewController.h */,
 				DA79BC2F1C822D92005428EF /* ViewController.m */,
 				DA79BC311C822D92005428EF /* Main.storyboard */,
+				DA79BC4D1C823D68005428EF /* Number.h */,
+				DA79BC4E1C823D68005428EF /* Number.m */,
+				DA79BC501C823D7F005428EF /* Number.xib */,
+				DAACC1D21C875CD000E52146 /* AMPM.h */,
+				DAACC1D31C875CD000E52146 /* AMPM.m */,
+				DAACC1D51C875CE500E52146 /* AMPM.xib */,
+				DAACC1D71C876F5100E52146 /* Colon.h */,
+				DAACC1D81C876F5100E52146 /* Colon.m */,
+				DAACC1DA1C876F6200E52146 /* Colon.xib */,
 				DA79BC341C822D92005428EF /* Images.xcassets */,
 				DA79BC361C822D92005428EF /* LaunchScreen.xib */,
 				DA79BC271C822D92005428EF /* Supporting Files */,
 			);
+			name = LCDClock;
 			path = AutoLayoutPractice;
 			sourceTree = "<group>";
 		};
@@ -102,12 +128,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DA79BC401C822D92005428EF /* AutoLayoutPracticeTests */ = {
+		DA79BC401C822D92005428EF /* LCDClockPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
 				DA79BC431C822D92005428EF /* AutoLayoutPracticeTests.m */,
 				DA79BC411C822D92005428EF /* Supporting Files */,
 			);
+			name = LCDClockPracticeTests;
 			path = AutoLayoutPracticeTests;
 			sourceTree = "<group>";
 		};
@@ -163,19 +190,21 @@
 		DA79BC1C1C822D92005428EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Julianne;
 				TargetAttributes = {
 					DA79BC231C822D92005428EF = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = A8UK245ANM;
 					};
 					DA79BC3C1C822D92005428EF = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = A8UK245ANM;
 						TestTargetID = DA79BC231C822D92005428EF;
 					};
 				};
 			};
-			buildConfigurationList = DA79BC1F1C822D92005428EF /* Build configuration list for PBXProject "AutoLayoutPractice" */;
+			buildConfigurationList = DA79BC1F1C822D92005428EF /* Build configuration list for PBXProject "LCDClock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -199,6 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA79BC511C823D7F005428EF /* Number.xib in Resources */,
+				DAACC1DB1C876F6200E52146 /* Colon.xib in Resources */,
+				DAACC1D61C875CE500E52146 /* AMPM.xib in Resources */,
 				DA79BC331C822D92005428EF /* Main.storyboard in Resources */,
 				DA79BC381C822D92005428EF /* LaunchScreen.xib in Resources */,
 				DA79BC351C822D92005428EF /* Images.xcassets in Resources */,
@@ -209,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAED1B631CC0624D00AD64E3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAACC1D41C875CD000E52146 /* AMPM.m in Sources */,
+				DA79BC4F1C823D68005428EF /* Number.m in Sources */,
 				DA79BC301C822D92005428EF /* ViewController.m in Sources */,
+				DAACC1D91C876F5100E52146 /* Colon.m in Sources */,
 				DA79BC2D1C822D92005428EF /* AppDelegate.m in Sources */,
 				DA79BC2A1C822D92005428EF /* main.m in Sources */,
 			);
@@ -280,9 +316,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -297,9 +335,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "413b6384-fa2d-413a-b9b4-f2487404ca01";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,6 +361,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -333,8 +373,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "413b6384-fa2d-413a-b9b4-f2487404ca01";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -345,9 +386,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AutoLayoutPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TurntoTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -355,9 +400,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AutoLayoutPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TurntoTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -365,17 +414,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
 				INFOPLIST_FILE = AutoLayoutPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TurntoTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLayoutPractice.app/AutoLayoutPractice";
 			};
 			name = Debug;
@@ -384,13 +435,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_WARN_UNUSED_LABEL = NO;
+				GCC_WARN_UNUSED_PARAMETER = NO;
 				INFOPLIST_FILE = AutoLayoutPracticeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TurntoTech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLayoutPractice.app/AutoLayoutPractice";
 			};
 			name = Release;
@@ -398,7 +451,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA79BC1F1C822D92005428EF /* Build configuration list for PBXProject "AutoLayoutPractice" */ = {
+		DA79BC1F1C822D92005428EF /* Build configuration list for PBXProject "LCDClock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA79BC451C822D92005428EF /* Debug */,
@@ -414,6 +467,7 @@
 				DA79BC491C822D92005428EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA79BC4A1C822D92005428EF /* Build configuration list for PBXNativeTarget "AutoLayoutPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +476,7 @@
 				DA79BC4C1C822D92005428EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

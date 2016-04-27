@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Colon">
+            <connections>
+                <outlet property="background" destination="g4z-yN-Iok" id="z4J-2T-kjx"/>
+                <outlet property="colonBottom" destination="dQy-ye-ZoN" id="ZBR-yV-kbG"/>
+                <outlet property="colonSpace" destination="Tqs-cI-fOr" id="igf-E1-0sJ"/>
+                <outlet property="colonTop" destination="o7C-H3-QTh" id="ms7-fV-Bx2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="122" height="243"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4z-yN-Iok" userLabel="background">
+                    <rect key="frame" x="0.0" y="0.0" width="122" height="243"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d7K-1E-jqq" userLabel="colon">
+                            <rect key="frame" x="49" y="76" width="24" height="89"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7C-H3-QTh" userLabel="colonTop">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                    <color key="backgroundColor" red="0.92007048229999999" green="0.32878949480000003" blue="0.31794190579999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="o7C-H3-QTh" secondAttribute="height" multiplier="1:1" id="Vg2-NO-m4K"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tqs-cI-fOr" userLabel="colonSpace">
+                                    <rect key="frame" x="0.0" y="24" width="24" height="41"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="Tqs-cI-fOr" secondAttribute="height" multiplier="3:5" id="3JM-p0-jkt"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQy-ye-ZoN" userLabel="colonBottom">
+                                    <rect key="frame" x="0.0" y="65" width="24" height="24"/>
+                                    <color key="backgroundColor" red="0.92007048229999999" green="0.32878949480000003" blue="0.31794190579999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="dQy-ye-ZoN" secondAttribute="height" multiplier="1:1" id="Xsi-PS-NIn"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="o7C-H3-QTh" firstAttribute="width" secondItem="g4z-yN-Iok" secondAttribute="height" multiplier="1:10" id="Lij-lB-waP"/>
+                        <constraint firstItem="d7K-1E-jqq" firstAttribute="centerX" secondItem="g4z-yN-Iok" secondAttribute="centerX" id="Pwq-5M-xDz"/>
+                        <constraint firstItem="d7K-1E-jqq" firstAttribute="centerY" secondItem="g4z-yN-Iok" secondAttribute="centerY" id="sEl-5h-TBy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="g4z-yN-Iok" secondAttribute="trailing" id="7Hd-Zl-1J0"/>
+                <constraint firstItem="g4z-yN-Iok" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NMs-Z8-dVd"/>
+                <constraint firstItem="g4z-yN-Iok" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ox9-Zg-Qz3"/>
+                <constraint firstAttribute="bottom" secondItem="g4z-yN-Iok" secondAttribute="bottom" id="V3I-9D-kgT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="126" y="144.5"/>
+        </view>
+    </objects>
+</document>

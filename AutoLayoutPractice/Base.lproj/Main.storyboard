@@ -1,25 +1,192 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-Jm-BXU" userLabel="clock">
+                                <rect key="frame" x="30" y="219" width="540" height="162"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwU-MM-kw7" userLabel="hourTens" customClass="Number">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="162"/>
+                                        <color key="backgroundColor" red="1" green="0.70313238684578105" blue="0.66587750530836143" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wwU-MM-kw7" secondAttribute="height" multiplier="90:163" id="vf8-DS-SgY"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ro-a6-d27" userLabel="hourOnes" customClass="Number">
+                                        <rect key="frame" x="100" y="0.0" width="91" height="162"/>
+                                        <color key="backgroundColor" red="1" green="0.79821003207192853" blue="0.58797017914646099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9ro-a6-d27" secondAttribute="height" multiplier="90:163" id="M8d-sb-iJO"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sZ-9K-YbJ" userLabel="colon" customClass="Colon">
+                                        <rect key="frame" x="201" y="0.0" width="38" height="162"/>
+                                        <color key="backgroundColor" red="0.98754190279999998" green="1" blue="0.74569382699999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1sZ-9K-YbJ" secondAttribute="height" multiplier="38:163" id="8d5-TJ-sy0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WP7-Ax-RJ2" userLabel="minuteTens" customClass="Number">
+                                        <rect key="frame" x="249" y="0.0" width="90" height="162"/>
+                                        <color key="backgroundColor" red="0.63553054626523198" green="1" blue="0.66216941003752106" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="WP7-Ax-RJ2" secondAttribute="height" multiplier="90:163" id="3Cj-ay-qRV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-j9-Ka7" userLabel="minuteOnes" customClass="Number">
+                                        <rect key="frame" x="349" y="0.0" width="91" height="162"/>
+                                        <color key="backgroundColor" red="0.76308939881376647" green="0.94001134297183397" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="mmR-j9-Ka7" secondAttribute="height" multiplier="90:163" id="Ato-Vz-HRV"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oCV-ep-JKq" userLabel="end">
+                                        <rect key="frame" x="450" y="0.0" width="90" height="162"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fP-rS-jYL" userLabel="ampm" customClass="AMPM">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="81"/>
+                                                <color key="backgroundColor" red="1" green="0.68853214470000002" blue="0.86946348740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8fP-rS-jYL" secondAttribute="height" multiplier="140:81" id="fuS-2l-3R6"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="fuS-2l-3R6"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GkT-WZ-nmv" userLabel="seconds">
+                                                <rect key="frame" x="0.0" y="81" width="90" height="81"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVc-Ir-8TY" userLabel="secondTens" customClass="Number">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="81"/>
+                                                        <color key="backgroundColor" red="0.87829156601468505" green="0.72382413796693301" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="zVc-Ir-8TY" secondAttribute="height" multiplier="70:81" id="VnH-Sr-VvH"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="VnH-Sr-VvH"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12t-rE-91F" userLabel="secondOnes" customClass="Number">
+                                                        <rect key="frame" x="45" y="0.0" width="45" height="81"/>
+                                                        <color key="backgroundColor" red="0.68113284249999995" green="0.63695582149999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="12t-rE-91F" secondAttribute="height" multiplier="70:81" id="baO-No-wdZ"/>
+                                                        </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="baO-No-wdZ"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oCV-ep-JKq" secondAttribute="height" multiplier="90:163" id="Gko-tM-gCz"/>
+                                            <constraint firstAttribute="width" secondItem="oCV-ep-JKq" secondAttribute="height" multiplier="50:163" id="dCG-RU-BTX"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dCG-RU-BTX"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9ro-a6-d27" firstAttribute="height" secondItem="wwU-MM-kw7" secondAttribute="height" id="7hm-cs-h58"/>
+                                    <constraint firstItem="9ro-a6-d27" firstAttribute="width" secondItem="wwU-MM-kw7" secondAttribute="width" id="J7p-l1-m4v"/>
+                                    <constraint firstAttribute="width" secondItem="OWs-Jm-BXU" secondAttribute="height" multiplier="600:181" id="QN0-wf-bk8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7hm-cs-h58"/>
+                                        <exclude reference="J7p-l1-m4v"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWl-JT-zp3" userLabel="TwentyFour Hour Button">
+                                <rect key="frame" x="20" y="540" width="276" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <state key="normal" title="24 Hour">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twentyFourHour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hpC-w1-YhR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1q-gq-qQc">
+                                <rect key="frame" x="304" y="540" width="276" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                <state key="normal" title="Time Zone">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="timeZones:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GHc-YM-YKx"/>
+                                </connections>
+                            </button>
+                            <pickerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-ob-wSb">
+                                <rect key="frame" x="20" y="0.0" width="560" height="532"/>
+                                <color key="backgroundColor" red="0.76420272435897441" green="0.76420272435897441" blue="0.76420272435897441" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M1q-gq-qQc" firstAttribute="top" secondItem="uvT-ob-wSb" secondAttribute="bottom" constant="8" id="2vu-Mr-GGQ"/>
+                            <constraint firstItem="NWl-JT-zp3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2.3:5" id="5f3-i4-86h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M1q-gq-qQc" secondAttribute="trailing" id="DBR-KV-Bae"/>
+                            <constraint firstItem="NWl-JT-zp3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="E08-dJ-G9V"/>
+                            <constraint firstItem="uvT-ob-wSb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="FsM-sL-YzD"/>
+                            <constraint firstItem="OWs-Jm-BXU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hgz-Bh-yyP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M1q-gq-qQc" secondAttribute="bottom" constant="10" id="Iqx-Pk-nb1"/>
+                            <constraint firstItem="M1q-gq-qQc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2.3:5" id="J4C-og-dqS"/>
+                            <constraint firstItem="NWl-JT-zp3" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:12" id="LZb-ia-fhV"/>
+                            <constraint firstItem="OWs-Jm-BXU" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="540:600" id="QH5-lh-Nzm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NWl-JT-zp3" secondAttribute="bottom" constant="10" id="UrE-TR-7lF"/>
+                            <constraint firstItem="uvT-ob-wSb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hpF-21-GOg"/>
+                            <constraint firstItem="uvT-ob-wSb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jgK-fj-AE0"/>
+                            <constraint firstItem="M1q-gq-qQc" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:12" id="wJy-kR-8Rf"/>
+                            <constraint firstItem="OWs-Jm-BXU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zJv-Bu-qI4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ampm" destination="8fP-rS-jYL" id="Cxm-63-MXx"/>
+                        <outlet property="colon" destination="1sZ-9K-YbJ" id="E2s-sL-tkS"/>
+                        <outlet property="hourOnes" destination="9ro-a6-d27" id="NIO-hE-3J2"/>
+                        <outlet property="hourTens" destination="wwU-MM-kw7" id="eQg-88-ymR"/>
+                        <outlet property="minuteOnes" destination="mmR-j9-Ka7" id="Qg9-vU-Rvr"/>
+                        <outlet property="minuteTens" destination="WP7-Ax-RJ2" id="hhl-g1-53Q"/>
+                        <outlet property="secondOnes" destination="12t-rE-91F" id="Nyv-K1-rOG"/>
+                        <outlet property="secondTens" destination="zVc-Ir-8TY" id="jf0-LD-zgY"/>
+                        <outlet property="timeZonePickerView" destination="uvT-ob-wSb" id="PkI-ol-JsB"/>
+                        <outlet property="twentyFourHourButton" destination="NWl-JT-zp3" id="ptG-u0-d9v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="280" y="305"/>
         </scene>
     </scenes>
 </document>

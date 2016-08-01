@@ -22,4 +22,4 @@ The goal of this project was to create an LCD-style clock
 
 ## License
 
-AWSS3 Refactoring is released under the MIT license. See LICENSE for details.
+LCD Clock is released under the MIT license. See LICENSE for details.

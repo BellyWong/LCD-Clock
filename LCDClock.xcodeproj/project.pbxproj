@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA25907E1D4ED4FF0066C5C3 /* UIColor+clockColors.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25907D1D4ED4FF0066C5C3 /* UIColor+clockColors.m */; };
 		DA79BC2A1C822D92005428EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79BC291C822D92005428EF /* main.m */; };
 		DA79BC2D1C822D92005428EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79BC2C1C822D92005428EF /* AppDelegate.m */; };
 		DA79BC301C822D92005428EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA79BC2F1C822D92005428EF /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA25907C1D4ED4FF0066C5C3 /* UIColor+clockColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+clockColors.h"; sourceTree = "<group>"; };
+		DA25907D1D4ED4FF0066C5C3 /* UIColor+clockColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+clockColors.m"; sourceTree = "<group>"; };
 		DA79BC241C822D92005428EF /* AutoLayoutPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA79BC281C822D92005428EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA79BC291C822D92005428EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -76,6 +79,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA25907F1D4ED50B0066C5C3 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DA79BC2B1C822D92005428EF /* AppDelegate.h */,
+				DA79BC2C1C822D92005428EF /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		DA2590801D4ED51B0066C5C3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA79BC2E1C822D92005428EF /* ViewController.h */,
+				DA79BC2F1C822D92005428EF /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DA2590811D4ED5320066C5C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA79BC311C822D92005428EF /* Main.storyboard */,
+				DA79BC4D1C823D68005428EF /* Number.h */,
+				DA79BC4E1C823D68005428EF /* Number.m */,
+				DA79BC501C823D7F005428EF /* Number.xib */,
+				DAACC1D21C875CD000E52146 /* AMPM.h */,
+				DAACC1D31C875CD000E52146 /* AMPM.m */,
+				DAACC1D51C875CE500E52146 /* AMPM.xib */,
+				DAACC1D71C876F5100E52146 /* Colon.h */,
+				DAACC1D81C876F5100E52146 /* Colon.m */,
+				DAACC1DA1C876F6200E52146 /* Colon.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DA2590821D4ED5400066C5C3 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				DA25907C1D4ED4FF0066C5C3 /* UIColor+clockColors.h */,
+				DA25907D1D4ED4FF0066C5C3 /* UIColor+clockColors.m */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
 		DA79BC1B1C822D91005428EF = {
 			isa = PBXGroup;
 			children = (
@@ -97,20 +144,10 @@
 		DA79BC261C822D92005428EF /* LCDClock */ = {
 			isa = PBXGroup;
 			children = (
-				DA79BC2B1C822D92005428EF /* AppDelegate.h */,
-				DA79BC2C1C822D92005428EF /* AppDelegate.m */,
-				DA79BC2E1C822D92005428EF /* ViewController.h */,
-				DA79BC2F1C822D92005428EF /* ViewController.m */,
-				DA79BC311C822D92005428EF /* Main.storyboard */,
-				DA79BC4D1C823D68005428EF /* Number.h */,
-				DA79BC4E1C823D68005428EF /* Number.m */,
-				DA79BC501C823D7F005428EF /* Number.xib */,
-				DAACC1D21C875CD000E52146 /* AMPM.h */,
-				DAACC1D31C875CD000E52146 /* AMPM.m */,
-				DAACC1D51C875CE500E52146 /* AMPM.xib */,
-				DAACC1D71C876F5100E52146 /* Colon.h */,
-				DAACC1D81C876F5100E52146 /* Colon.m */,
-				DAACC1DA1C876F6200E52146 /* Colon.xib */,
+				DA25907F1D4ED50B0066C5C3 /* App Delegate */,
+				DA2590801D4ED51B0066C5C3 /* Controller */,
+				DA2590811D4ED5320066C5C3 /* Views */,
+				DA2590821D4ED5400066C5C3 /* Colors */,
 				DA79BC341C822D92005428EF /* Images.xcassets */,
 				DA79BC361C822D92005428EF /* LaunchScreen.xib */,
 				DA79BC271C822D92005428EF /* Supporting Files */,
@@ -195,7 +232,6 @@
 				TargetAttributes = {
 					DA79BC231C822D92005428EF = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = A8UK245ANM;
 					};
 					DA79BC3C1C822D92005428EF = {
 						CreatedOnToolsVersion = 6.2;
@@ -253,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAACC1D41C875CD000E52146 /* AMPM.m in Sources */,
+				DA25907E1D4ED4FF0066C5C3 /* UIColor+clockColors.m in Sources */,
 				DA79BC4F1C823D68005428EF /* Number.m in Sources */,
 				DA79BC301C822D92005428EF /* ViewController.m in Sources */,
 				DAACC1D91C876F5100E52146 /* Colon.m in Sources */,
@@ -390,7 +427,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AutoLayoutPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TurntoTech.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOess.LCD-Clock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -404,7 +441,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AutoLayoutPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TurntoTech.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "iOess.LCD-Clock";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

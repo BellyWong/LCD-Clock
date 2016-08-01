@@ -10,6 +10,7 @@
 #import "Number.h"
 #import "AMPM.h"
 #import "Colon.h"
+#import "UIColor+clockColors.h"
 
 
 @interface ViewController : UIViewController <NSCoding, UIPickerViewDelegate, UIPickerViewDataSource>

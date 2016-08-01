@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++45A1D8E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++14F769C" : 0,
+    "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++842E654" : 0,
+    "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++45A1D8E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "41DE9918-C47D-419F-A21C-49A0972EF9CF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++14F769C" : "..\/..\/..\/Desktop\/TurntoTech\/Section2-2LCDClock\/AutoLayoutPractice",
+    "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++842E654" : "..\/..\/..\/Desktop\/TurntoTech\/Section2-2LCDClock\/AutoLayoutPractice",
+    "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++45A1D8E" : "LCD-Clock\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LCDClock",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LCDClock.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOess\/LCD-Clock.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++14F769C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOess\/LCD-Clock",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++45A1D8E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/iOess\/LCD-Clock",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5BF342AECEC3BD582477FF2F6C4BAD011A98C4CE+++842E654"
+    }
+  ]
+}

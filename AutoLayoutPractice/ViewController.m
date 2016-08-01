@@ -10,27 +10,12 @@
 
 @interface ViewController()
 
-@property (nonatomic) UIColor *fontRed;
-@property (nonatomic) UIColor *fontYellow;
-@property (nonatomic) UIColor *fontBlue;
-@property (nonatomic) UIColor *bgRed;
-@property (nonatomic) UIColor *bgYellow;
-@property (nonatomic) UIColor *bgBlue;
-
 @property (nonatomic) int seconds;
 @property (nonatomic) int minutes;
 @property (nonatomic) int hours;
 @property (nonatomic) NSDate *now;
 @property (nonatomic) NSCalendar *calendar;
 @property (nonatomic) NSArray *pickerViewArray;
-
-- (void) setColors;
-- (void) changeBackgroundColorTo:(id)color;
-- (void) changeFontColorTo:(id)color;
-- (void) updateSeconds;
-- (void) updateMinutes;
-- (void) updateHours;
-- (void) findCurrentTimeWithTimeZone:(id)timeZone;
 
 @end
 
@@ -40,7 +25,6 @@
     [super viewDidLoad];
     
     [self.colon colonBlink];
-    [self setColors];
     
     // Track seconds
     [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateSeconds) userInfo:nil repeats:YES];
@@ -51,121 +35,152 @@
     self.pickerViewArray = @[@"Tuam",@"Zadar",@"Chapel Hill",@"Da Nang",@"Ulaanbaatar"];
     [self.timeZonePickerView setHidden:YES];
 
-    // Swiper gesture to change background color
-    UISwipeGestureRecognizer *swipeRecognizer;
-    swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
-    [swipeRecognizer setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionDown | UISwipeGestureRecognizerDirectionLeft | UISwipeGestureRecognizerDirectionUp)];
-    [[self view] addGestureRecognizer:swipeRecognizer];
+    [self setSwipeGesture]; // Swipe gesture changes background color
+    [self setLongPressGesture]; // Long press gesture changes font color
     
-    // Long press gesture to change font color
-    UILongPressGestureRecognizer *longPressRecognizer;
-    longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressFrom:)];
-    [[self view] addGestureRecognizer:longPressRecognizer];
-    
-    // NSUserDefaults to save: timeZone, fontColor, bgColor
+    // Retrieve user preferences from NSUserDefaults
     NSString *timeZone = [[NSUserDefaults standardUserDefaults] objectForKey:@"timeZonePreference"];
     [self findCurrentTimeWithTimeZone:timeZone];
     [self twentyFourHour:nil];
     
-    NSUInteger fontColorInteger = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontColorPreference"];
-        switch (fontColorInteger) {
-            case 0:
-                [self changeFontColorTo:self.fontRed];
-                break;
-            case 1:
-                [self changeFontColorTo:self.fontBlue];
-                break;
-            case 2:
-                [self changeFontColorTo:self.fontYellow];
-                break;
-            default:
-                break;
-        }
+    [self retrieveBackgroundColor];
+    [self retrieveFontColor];
+
+}
+
+#pragma mark - Gesture Methods
+
+- (void)setSwipeGesture {
     
-    NSUInteger bgColorInteger = [[NSUserDefaults standardUserDefaults] integerForKey:@"bgColorPreference"];
-        switch (bgColorInteger){
-            case 0:
-                [self changeBackgroundColorTo:[UIColor whiteColor]];
-                break;
-            case 1:
-                [self changeBackgroundColorTo:[UIColor blackColor]];
-                break;
-            case 2:
-                [self changeBackgroundColorTo:self.bgRed];
-                break;
-            case 3:
-                [self changeBackgroundColorTo:self.bgBlue];
-                break;
-            case 4:
-                [self changeBackgroundColorTo:self.bgYellow];
-                break;
-            default:
-                break;
-        }
+    UISwipeGestureRecognizer *swipeRecognizer;
+    swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+    [swipeRecognizer setDirection:(UISwipeGestureRecognizerDirectionRight | UISwipeGestureRecognizerDirectionDown | UISwipeGestureRecognizerDirectionLeft | UISwipeGestureRecognizerDirectionUp)];
+    [[self view] addGestureRecognizer:swipeRecognizer];
+}
+
+- (void)setLongPressGesture {
+    
+    UILongPressGestureRecognizer *longPressRecognizer;
+    longPressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPressFrom:)];
+    [[self view] addGestureRecognizer:longPressRecognizer];
 }
 
 #pragma mark - Color Methods
 
-- (void)setColors {
+- (void)retrieveBackgroundColor {
+    
+    NSUInteger backgroundColorInteger = [[NSUserDefaults standardUserDefaults] integerForKey:@"backgroundColorPreference"];
+    switch (backgroundColorInteger){
+        case 0:
+            [self changeBackgroundColorTo:[UIColor backgroundRed]];
+            break;
+        case 1:
+            [self changeBackgroundColorTo:[UIColor blackColor]];
+            break;
+        case 2:
+            [self changeBackgroundColorTo:[UIColor backgroundPurple]];
+            break;
+        case 3:
+            [self changeBackgroundColorTo:[UIColor backgroundGreen]];
+            break;
+        case 4:
+            [self changeBackgroundColorTo:[UIColor backgroundBlue]];
+            break;
+        default:
+            break;
+    }
+}
 
-    self.fontRed = [UIColor colorWithRed:(255.0 / 255.0) green:(92.0 / 255.0) blue:(90.0 / 255.0) alpha: 1];
-    self.fontYellow = [UIColor colorWithRed:(255.0 / 255.0) green:(210.0 / 255.0) blue:(77.0 / 255.0) alpha: 1];
-    self.fontBlue = [UIColor colorWithRed:(0.0 / 255.0) green:(184.0 / 255.0) blue:(230.0 / 255.0) alpha: 1];
-    self.bgRed = [UIColor colorWithRed:(255.0 / 255.0) green:(155.0 / 255.0) blue:(153.0 / 255.0) alpha: 1];
-    self.bgYellow = [UIColor colorWithRed:(255.0 / 255.0) green:(236.0 / 255.0) blue:(179.0 / 255.0) alpha: 1];
-    self.bgBlue = [UIColor colorWithRed:(153.0 / 255.0) green:(235.0 / 255.0) blue:(255.0 / 255.0) alpha: 1];
+- (void)retrieveFontColor {
+    
+    NSUInteger fontColorInteger = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontColorPreference"];
+    switch (fontColorInteger) {
+        case 0:
+            [self changeFontColorTo:[UIColor fontYellow]];
+            break;
+        case 1:
+            [self changeFontColorTo:[UIColor fontPink]];
+            break;
+        case 2:
+            [self changeFontColorTo:[UIColor fontPurple]];
+            break;
+        case 3:
+            [self changeFontColorTo:[UIColor fontBlue]];
+            break;
+        case 4:
+            [self changeFontColorTo:[UIColor fontGreen]];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)handleSwipeFrom:(UISwipeGestureRecognizer *)recognizer {
-    NSLog(@"Swipe received.");
-    int colorInt;
-    if ([self.view.backgroundColor isEqual:[UIColor whiteColor]]) {
-        [self changeBackgroundColorTo:[UIColor blackColor]];
-        colorInt = 1;
+    NSLog(@"Swipe received");
+    NSUInteger backgroundInt = [[NSUserDefaults standardUserDefaults] integerForKey:@"backgroundColorPreference"];
+    switch (backgroundInt) {
+        case 0:
+            [self changeBackgroundColorTo:[UIColor blackColor]];
+            backgroundInt = 1;
+            break;
+        case 1:
+            [self changeBackgroundColorTo:[UIColor backgroundPurple]];
+            backgroundInt = 2;
+            break;
+        case 2:
+            [self changeBackgroundColorTo:[UIColor backgroundGreen]];
+            backgroundInt = 3;
+            break;
+        case 3:
+            [self changeBackgroundColorTo:[UIColor backgroundBlue]];
+            backgroundInt = 4;
+            break;
+        case 4:
+            [self changeBackgroundColorTo:[UIColor backgroundRed]];
+            backgroundInt = 0;
+            break;
+        default:
+            break;
     }
-    else if ([self.view.backgroundColor isEqual:[UIColor blackColor]]) {
-        [self changeBackgroundColorTo:self.bgRed];
-        colorInt = 2;
-    }
-    else if ([self.view.backgroundColor isEqual:self.bgRed]) {
-        [self changeBackgroundColorTo:self.bgBlue];
-        colorInt = 3;
-    }
-    else if ([self.view.backgroundColor isEqual:self.bgBlue]) {
-        [self changeBackgroundColorTo:self.bgYellow];
-        colorInt = 4;
-    }
-    else if ([self.view.backgroundColor isEqual:self.bgYellow]) {
-        [self changeBackgroundColorTo:[UIColor whiteColor]];
-        colorInt = 0;
-    }
-    [[NSUserDefaults standardUserDefaults] setInteger:colorInt forKey:@"bgColorPreference"];
+    [[NSUserDefaults standardUserDefaults] setInteger:backgroundInt forKey:@"backgroundColorPreference"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
-- (void)handleLongPressFrom:(UILongPressGestureRecognizer*)sender {
+- (void)handleLongPressFrom:(UILongPressGestureRecognizer *)sender {
     if (sender.state == UIGestureRecognizerStateEnded) {
         NSLog(@"UIGestureRecognizerStateEnded");
-        //Do Whatever You want on End of Gesture
     }
-    else if (sender.state == UIGestureRecognizerStateBegan){
-        NSLog(@"UIGestureRecognizerStateBegan.");
-        //Do Whatever You want on Began of Gesture
-        NSLog(@"Long press received.");
-        int color;
-        if ([self.hourTens.top.backgroundColor isEqual:self.fontRed]) {
-            [self changeFontColorTo:self.fontBlue];
-            color = 1;
+    else if (sender.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"UIGestureRecognizerStateBegan");
+        NSLog(@"Long Press received");
+        
+        NSUInteger fontInt = [[NSUserDefaults standardUserDefaults] integerForKey:@"fontColorPreference"];
+        switch (fontInt) {
+            case 0:
+                [self changeFontColorTo:[UIColor fontPink]];
+                fontInt = 1;
+                break;
+            case 1:
+                [self changeFontColorTo:[UIColor fontPurple]];
+                fontInt = 2;
+                break;
+            case 2:
+                [self changeFontColorTo:[UIColor fontBlue]];
+                fontInt = 3;
+                break;
+            case 3:
+                [self changeFontColorTo:[UIColor fontGreen]];
+                fontInt = 4;
+                break;
+            case 4:
+                [self changeFontColorTo:[UIColor fontYellow]];
+                fontInt = 0;
+                break;
+            default:
+                break;
+        
         }
-        else if ([self.hourTens.top.backgroundColor isEqual:self.fontBlue]) {
-            [self changeFontColorTo:self.fontYellow];
-            color = 2;
-        }
-        else if ([self.hourTens.top.backgroundColor isEqual:self.fontYellow]) {
-            [self changeFontColorTo:self.fontRed];
-            color = 0;
-        }
-        [[NSUserDefaults standardUserDefaults] setInteger:color forKey:@"fontColorPreference"];
+        [[NSUserDefaults standardUserDefaults] setInteger:fontInt forKey:@"fontColorPreference"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
 }
@@ -372,7 +387,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
